@@ -1,1 +1,1 @@
-Sujet 1 : Correction de la documentation du projet.
+Sujet 2 : Ajout des notes de mise à jour pour la version 2.
