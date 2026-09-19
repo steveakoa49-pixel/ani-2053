@@ -1,1 +1,1 @@
-Ligne originale
+Ligne modifiee par le clone B
