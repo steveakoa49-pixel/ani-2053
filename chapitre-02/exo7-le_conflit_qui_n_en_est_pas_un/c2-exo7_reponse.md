@@ -1,12 +1,35 @@
 # Exercice 7 : Le conflit qui n'en est pas un
 
-## 1. Description du scénario
-Deux personnes ont modifié le même fichier (`fichier.txt`), mais à des lignes différentes :
-- Le Clone B a modifié la ligne 1 (haut du fichier)[span_0](start_span)[span_0](end_span).
-- Le Dépôt A a modifié la ligne 5 (bas du fichier)[span_1](start_span)[span_1](end_span).
+## 1. États de départ (avant la fusion)
 
-## 2. Comportement de Git
-Lors de l'exécution de `git pull` dans le Dépôt A[span_2](start_span)[span_2](end_span) :
-1. Git a analysé les deux versions du fichier.
-2. Constatant que les modifications ne se chevauchaient pas sur les mêmes lignes, Git a effectué une fusion automatique (*auto-merge*) sans générer de conflit[span_3](start_span)[span_3](end_span).
-3. Il a utilisé la stratégie de fusion par défaut (`ort strategy`) pour combiner les deux changements[span_4](start_span)[span_4](end_span).
+Sortie de `git log --oneline` dans le Dépôt A (modification locale) :
+```text
+9bac9fa Modification du bas du fichier par depot A
+1f10c1f Initialisation de fichier.txt avec plusieurs lignes
+
+Sortie de ⁠git log --oneline⁠ dans le Clone B (modification poussée sur origin) :
+
+264a8b2 Modification du haut du fichier par clone B
+1f10c1f Initialisation de fichier.txt avec plusieurs lignes
+
+## 2. Commande de fusion et réponse complète de la machine
+
+Commande ⁠git pull origin main⁠ exécutée dans le Dépôt A :
+
+From [https://github.com/steveakoa49-pixel/ani-2053](https://github.com/steveakoa49-pixel/ani-2053)
+ * branch            main       -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ chapitre-02/exo7-le_conflit_qui_n_en_est_pas_un/fichier.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ ## 3. Contenu du fichier après la fusion (sans intervention humaine)
+
+Sortie de la commande d'affichage du fichier réuni par Git :
+
+Get-Content chapitre-02/exo7-le_conflit_qui_n_en_est_pas_un/fichier.txt
+Ligne 1 : modifiee par le clone B
+Ligne 2
+Ligne 3
+Ligne 4
+Ligne 5 : modifiee par le depot A
+
