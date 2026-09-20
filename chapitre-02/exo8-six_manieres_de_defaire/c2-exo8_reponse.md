@@ -384,6 +384,365 @@ f556949 HEAD@{28}: pull origin main --rebase (pick): Correction de la documentat
 8e2d24d HEAD@{29}: pull origin main --rebase (start): checkout 8e2d24d6f227cedac783fd55473eda760a0c2eca
 f2f78b0 HEAD@{30}: reset: moving to HEAD
 :
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+e121650 HEAD@{4}: commit: Ajout du compte rendu exo 8 avec les sorties de terminal
+5813c7b HEAD@{5}: commit: Correction exo 7 : ajout des sorties de terminal
+2e48221 HEAD@{6}: commit: Ajout du fichier de reponse exo 7
+679bdfc HEAD@{7}: pull origin main: Merge made by the 'ort' strategy.
+9bac9fa HEAD@{8}: commit: Modification du bas du fichier par depot A
+a1553e2 HEAD@{9}: commit: Initialisation de fichier.txt avec plusieurs lignes
+f10c1f4 HEAD@{10}: commit: Initialisation de fichier.txt avec plusieurs lignes
+dc91b6f HEAD@{11}: commit: Ajout du fichier de reponse exo 6
+f7a7306 HEAD@{12}: commit (merge): Resolution du conflit de fusion
+aa4b8c5 HEAD@{13}: commit: Modification depuis le depot A
+34c2708 HEAD@{14}: commit: Ajout initial du fichier pour le conflit
+a08a5ee HEAD@{15}: checkout: moving from main to main
+a08a5ee HEAD@{16}: commit: Ajout initial du fichier pour le conflit
+bc8fbc1 HEAD@{17}: checkout: moving from main to main
+bc8fbc1 HEAD@{18}: checkout: moving from main to main
+bc8fbc1 HEAD@{19}: commit: Ajout du fichier de reponse exo 5
+31a6e0a HEAD@{20}: checkout: moving from test-mesure to main
+feee3c1 (test-mesure) HEAD@{21}: commit: Troisieme commit sur la branche
+477731d HEAD@{22}: commit: Deuxieme commit sur la branche
+6d17937 HEAD@{23}: commit: Premier commit sur la branche
+31a6e0a HEAD@{24}: checkout: moving from main to test-mesure
+31a6e0a HEAD@{25}: pull origin main --rebase (finish): returning to refs/heads/main
+31a6e0a HEAD@{26}: pull origin main --rebase (pick): Ajout du fichier de reponse exo4
+dff28a3 HEAD@{27}: pull origin main --rebase (pick): Ajout des notes de mise à jour pour la version 2.
+f556949 HEAD@{28}: pull origin main --rebase (pick): Correction de la documentation du projet
+8e2d24d HEAD@{29}: pull origin main --rebase (start): checkout 8e2d24d6f227cedac783fd55473eda760a0c2eca
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+e121650 HEAD@{4}: commit: Ajout du compte rendu exo 8 avec les sorties de terminal
+5813c7b HEAD@{5}: commit: Correction exo 7 : ajout des sorties de terminal
+2e48221 HEAD@{6}: commit: Ajout du fichier de reponse exo 7
+679bdfc HEAD@{7}: pull origin main: Merge made by the 'ort' strategy.
+9bac9fa HEAD@{8}: commit: Modification du bas du fichier par depot A
+a1553e2 HEAD@{9}: commit: Initialisation de fichier.txt avec plusieurs lignes
+f10c1f4 HEAD@{10}: commit: Initialisation de fichier.txt avec plusieurs lignes
+dc91b6f HEAD@{11}: commit: Ajout du fichier de reponse exo 6
+f7a7306 HEAD@{12}: commit (merge): Resolution du conflit de fusion
+aa4b8c5 HEAD@{13}: commit: Modification depuis le depot A
+34c2708 HEAD@{14}: commit: Ajout initial du fichier pour le conflit
+a08a5ee HEAD@{15}: checkout: moving from main to main
+a08a5ee HEAD@{16}: commit: Ajout initial du fichier pour le conflit
+bc8fbc1 HEAD@{17}: checkout: moving from main to main
+bc8fbc1 HEAD@{18}: checkout: moving from main to main
+bc8fbc1 HEAD@{19}: commit: Ajout du fichier de reponse exo 5
+31a6e0a HEAD@{20}: checkout: moving from test-mesure to main
+feee3c1 (test-mesure) HEAD@{21}: commit: Troisieme commit sur la branche
+477731d HEAD@{22}: commit: Deuxieme commit sur la branche
+6d17937 HEAD@{23}: commit: Premier commit sur la branche
+31a6e0a HEAD@{24}: checkout: moving from main to test-mesure
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+e121650 HEAD@{4}: commit: Ajout du compte rendu exo 8 avec les sorties de terminal
+5813c7b HEAD@{5}: commit: Correction exo 7 : ajout des sorties de terminal
+2e48221 HEAD@{6}: commit: Ajout du fichier de reponse exo 7
+679bdfc HEAD@{7}: pull origin main: Merge made by the 'ort' strategy.
+9bac9fa HEAD@{8}: commit: Modification du bas du fichier par depot A
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+e121650 HEAD@{4}: commit: Ajout du compte rendu exo 8 avec les sorties de terminal
+5813c7b HEAD@{5}: commit: Correction exo 7 : ajout des sorties de terminal
+2e48221 HEAD@{6}: commit: Ajout du fichier de reponse exo 7
+679bdfc HEAD@{7}: pull origin main: Merge made by the 'ort' strategy.
+9bac9fa HEAD@{8}: commit: Modification du bas du fichier par depot A
+a1553e2 HEAD@{9}: commit: Initialisation de fichier.txt avec plusieurs lignes
+f10c1f4 HEAD@{10}: commit: Initialisation de fichier.txt avec plusieurs lignes
+dc91b6f HEAD@{11}: commit: Ajout du fichier de reponse exo 6
+f7a7306 HEAD@{12}: commit (merge): Resolution du conflit de fusion
+aa4b8c5 HEAD@{13}: commit: Modification depuis le depot A
+34c2708 HEAD@{14}: commit: Ajout initial du fichier pour le conflit
+a08a5ee HEAD@{15}: checkout: moving from main to main
+a08a5ee HEAD@{16}: commit: Ajout initial du fichier pour le conflit
+bc8fbc1 HEAD@{17}: checkout: moving from main to main
+bc8fbc1 HEAD@{18}: checkout: moving from main to main
+bc8fbc1 HEAD@{19}: commit: Ajout du fichier de reponse exo 5
+31a6e0a HEAD@{20}: checkout: moving from test-mesure to main
+feee3c1 (test-mesure) HEAD@{21}: commit: Troisieme commit sur la branche
+477731d HEAD@{22}: commit: Deuxieme commit sur la branche
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+e121650 HEAD@{4}: commit: Ajout du compte rendu exo 8 avec les sorties de terminal
+5813c7b HEAD@{5}: commit: Correction exo 7 : ajout des sorties de terminal
+2e48221 HEAD@{6}: commit: Ajout du fichier de reponse exo 7
+679bdfc HEAD@{7}: pull origin main: Merge made by the 'ort' strategy.
+9bac9fa HEAD@{8}: commit: Modification du bas du fichier par depot A
+a1553e2 HEAD@{9}: commit: Initialisation de fichier.txt avec plusieurs lignes
+f10c1f4 HEAD@{10}: commit: Initialisation de fichier.txt avec plusieurs lignes
+dc91b6f HEAD@{11}: commit: Ajout du fichier de reponse exo 6
+f7a7306 HEAD@{12}: commit (merge): Resolution du conflit de fusion
+aa4b8c5 HEAD@{13}: commit: Modification depuis le depot A
+34c2708 HEAD@{14}: commit: Ajout initial du fichier pour le conflit
+a08a5ee HEAD@{15}: checkout: moving from main to main
+a08a5ee HEAD@{16}: commit: Ajout initial du fichier pour le conflit
+bc8fbc1 HEAD@{17}: checkout: moving from main to main
+bc8fbc1 HEAD@{18}: checkout: moving from main to main
+bc8fbc1 HEAD@{19}: commit: Ajout du fichier de reponse exo 5
+31a6e0a HEAD@{20}: checkout: moving from test-mesure to main
+feee3c1 (test-mesure) HEAD@{21}: commit: Troisieme commit sur la branche
+477731d HEAD@{22}: commit: Deuxieme commit sur la branche
+6d17937 HEAD@{23}: commit: Premier commit sur la branche
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+e121650 HEAD@{4}: commit: Ajout du compte rendu exo 8 avec les sorties de terminal
+5813c7b HEAD@{5}: commit: Correction exo 7 : ajout des sorties de terminal
+2e48221 HEAD@{6}: commit: Ajout du fichier de reponse exo 7
+679bdfc HEAD@{7}: pull origin main: Merge made by the 'ort' strategy.
+9bac9fa HEAD@{8}: commit: Modification du bas du fichier par depot A
+a1553e2 HEAD@{9}: commit: Initialisation de fichier.txt avec plusieurs lignes
+f10c1f4 HEAD@{10}: commit: Initialisation de fichier.txt avec plusieurs lignes
+dc91b6f HEAD@{11}: commit: Ajout du fichier de reponse exo 6
+f7a7306 HEAD@{12}: commit (merge): Resolution du conflit de fusion
+aa4b8c5 HEAD@{13}: commit: Modification depuis le depot A
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+e121650 HEAD@{4}: commit: Ajout du compte rendu exo 8 avec les sorties de terminal
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+e121650 HEAD@{4}: commit: Ajout du compte rendu exo 8 avec les sorties de terminal
+5813c7b HEAD@{5}: commit: Correction exo 7 : ajout des sorties de terminal
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+e121650 HEAD@{4}: commit: Ajout du compte rendu exo 8 avec les sorties de terminal
+5813c7b HEAD@{5}: commit: Correction exo 7 : ajout des sorties de terminal
+2e48221 HEAD@{6}: commit: Ajout du fichier de reponse exo 7
+679bdfc HEAD@{7}: pull origin main: Merge made by the 'ort' strategy.
+9bac9fa HEAD@{8}: commit: Modification du bas du fichier par depot A
+a1553e2 HEAD@{9}: commit: Initialisation de fichier.txt avec plusieurs lignes
+f10c1f4 HEAD@{10}: commit: Initialisation de fichier.txt avec plusieurs lignes
+dc91b6f HEAD@{11}: commit: Ajout du fichier de reponse exo 6
+f7a7306 HEAD@{12}: commit (merge): Resolution du conflit de fusion
+aa4b8c5 HEAD@{13}: commit: Modification depuis le depot A
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+e121650 HEAD@{4}: commit: Ajout du compte rendu exo 8 avec les sorties de terminal
+5813c7b HEAD@{5}: commit: Correction exo 7 : ajout des sorties de terminal
+2e48221 HEAD@{6}: commit: Ajout du fichier de reponse exo 7
+679bdfc HEAD@{7}: pull origin main: Merge made by the 'ort' strategy.
+9bac9fa HEAD@{8}: commit: Modification du bas du fichier par depot A
+a1553e2 HEAD@{9}: commit: Initialisation de fichier.txt avec plusieurs lignes
+f10c1f4 HEAD@{10}: commit: Initialisation de fichier.txt avec plusieurs lignes
+dc91b6f HEAD@{11}: commit: Ajout du fichier de reponse exo 6
+f7a7306 HEAD@{12}: commit (merge): Resolution du conflit de fusion
+aa4b8c5 HEAD@{13}: commit: Modification depuis le depot A
+34c2708 HEAD@{14}: commit: Ajout initial du fichier pour le conflit
+a08a5ee HEAD@{15}: checkout: moving from main to main
+a08a5ee HEAD@{16}: commit: Ajout initial du fichier pour le conflit
+bc8fbc1 HEAD@{17}: checkout: moving from main to main
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+e121650 HEAD@{4}: commit: Ajout du compte rendu exo 8 avec les sorties de terminal
+5813c7b HEAD@{5}: commit: Correction exo 7 : ajout des sorties de terminal
+2e48221 HEAD@{6}: commit: Ajout du fichier de reponse exo 7
+679bdfc HEAD@{7}: pull origin main: Merge made by the 'ort' strategy.
+9bac9fa HEAD@{8}: commit: Modification du bas du fichier par depot A
+a1553e2 HEAD@{9}: commit: Initialisation de fichier.txt avec plusieurs lignes
+f10c1f4 HEAD@{10}: commit: Initialisation de fichier.txt avec plusieurs lignes
+dc91b6f HEAD@{11}: commit: Ajout du fichier de reponse exo 6
+f7a7306 HEAD@{12}: commit (merge): Resolution du conflit de fusion
+aa4b8c5 HEAD@{13}: commit: Modification depuis le depot A
+34c2708 HEAD@{14}: commit: Ajout initial du fichier pour le conflit
+a08a5ee HEAD@{15}: checkout: moving from main to main
+a08a5ee HEAD@{16}: commit: Ajout initial du fichier pour le conflit
+bc8fbc1 HEAD@{17}: checkout: moving from main to main
+bc8fbc1 HEAD@{18}: checkout: moving from main to main
+bc8fbc1 HEAD@{19}: commit: Ajout du fichier de reponse exo 5
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+e121650 HEAD@{4}: commit: Ajout du compte rendu exo 8 avec les sorties de terminal
+5813c7b HEAD@{5}: commit: Correction exo 7 : ajout des sorties de terminal
+2e48221 HEAD@{6}: commit: Ajout du fichier de reponse exo 7
+679bdfc HEAD@{7}: pull origin main: Merge made by the 'ort' strategy.
+9bac9fa HEAD@{8}: commit: Modification du bas du fichier par depot A
+a1553e2 HEAD@{9}: commit: Initialisation de fichier.txt avec plusieurs lignes
+f10c1f4 HEAD@{10}: commit: Initialisation de fichier.txt avec plusieurs lignes
+dc91b6f HEAD@{11}: commit: Ajout du fichier de reponse exo 6
+f7a7306 HEAD@{12}: commit (merge): Resolution du conflit de fusion
+aa4b8c5 HEAD@{13}: commit: Modification depuis le depot A
+34c2708 HEAD@{14}: commit: Ajout initial du fichier pour le conflit
+a08a5ee HEAD@{15}: checkout: moving from main to main
+a08a5ee HEAD@{16}: commit: Ajout initial du fichier pour le conflit
+bc8fbc1 HEAD@{17}: checkout: moving from main to main
+bc8fbc1 HEAD@{18}: checkout: moving from main to main
+bc8fbc1 HEAD@{19}: commit: Ajout du fichier de reponse exo 5
+31a6e0a HEAD@{20}: checkout: moving from test-mesure to main
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+e121650 HEAD@{4}: commit: Ajout du compte rendu exo 8 avec les sorties de terminal
+5813c7b HEAD@{5}: commit: Correction exo 7 : ajout des sorties de terminal
+2e48221 HEAD@{6}: commit: Ajout du fichier de reponse exo 7
+679bdfc HEAD@{7}: pull origin main: Merge made by the 'ort' strategy.
+9bac9fa HEAD@{8}: commit: Modification du bas du fichier par depot A
+a1553e2 HEAD@{9}: commit: Initialisation de fichier.txt avec plusieurs lignes
+f10c1f4 HEAD@{10}: commit: Initialisation de fichier.txt avec plusieurs lignes
+dc91b6f HEAD@{11}: commit: Ajout du fichier de reponse exo 6
+f7a7306 HEAD@{12}: commit (merge): Resolution du conflit de fusion
+aa4b8c5 HEAD@{13}: commit: Modification depuis le depot A
+34c2708 HEAD@{14}: commit: Ajout initial du fichier pour le conflit
+a08a5ee HEAD@{15}: checkout: moving from main to main
+a08a5ee HEAD@{16}: commit: Ajout initial du fichier pour le conflit
+bc8fbc1 HEAD@{17}: checkout: moving from main to main
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+e121650 HEAD@{4}: commit: Ajout du compte rendu exo 8 avec les sorties de terminal
+5813c7b HEAD@{5}: commit: Correction exo 7 : ajout des sorties de terminal
+2e48221 HEAD@{6}: commit: Ajout du fichier de reponse exo 7
+679bdfc HEAD@{7}: pull origin main: Merge made by the 'ort' strategy.
+9bac9fa HEAD@{8}: commit: Modification du bas du fichier par depot A
+a1553e2 HEAD@{9}: commit: Initialisation de fichier.txt avec plusieurs lignes
+f10c1f4 HEAD@{10}: commit: Initialisation de fichier.txt avec plusieurs lignes
+dc91b6f HEAD@{11}: commit: Ajout du fichier de reponse exo 6
+f7a7306 HEAD@{12}: commit (merge): Resolution du conflit de fusion
+aa4b8c5 HEAD@{13}: commit: Modification depuis le depot A
+34c2708 HEAD@{14}: commit: Ajout initial du fichier pour le conflit
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+e121650 HEAD@{4}: commit: Ajout du compte rendu exo 8 avec les sorties de terminal
+5813c7b HEAD@{5}: commit: Correction exo 7 : ajout des sorties de terminal
+2e48221 HEAD@{6}: commit: Ajout du fichier de reponse exo 7
+679bdfc HEAD@{7}: pull origin main: Merge made by the 'ort' strategy.
+9bac9fa HEAD@{8}: commit: Modification du bas du fichier par depot A
+a1553e2 HEAD@{9}: commit: Initialisation de fichier.txt avec plusieurs lignes
+f10c1f4 HEAD@{10}: commit: Initialisation de fichier.txt avec plusieurs lignes
+dc91b6f HEAD@{11}: commit: Ajout du fichier de reponse exo 6
+f7a7306 HEAD@{12}: commit (merge): Resolution du conflit de fusion
+aa4b8c5 HEAD@{13}: commit: Modification depuis le depot A
+34c2708 HEAD@{14}: commit: Ajout initial du fichier pour le conflit
+a08a5ee HEAD@{15}: checkout: moving from main to main
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+e121650 HEAD@{4}: commit: Ajout du compte rendu exo 8 avec les sorties de terminal
+5813c7b HEAD@{5}: commit: Correction exo 7 : ajout des sorties de terminal
+2e48221 HEAD@{6}: commit: Ajout du fichier de reponse exo 7
+679bdfc HEAD@{7}: pull origin main: Merge made by the 'ort' strategy.
+9bac9fa HEAD@{8}: commit: Modification du bas du fichier par depot A
+a1553e2 HEAD@{9}: commit: Initialisation de fichier.txt avec plusieurs lignes
+f10c1f4 HEAD@{10}: commit: Initialisation de fichier.txt avec plusieurs lignes
+dc91b6f HEAD@{11}: commit: Ajout du fichier de reponse exo 6
+f7a7306 HEAD@{12}: commit (merge): Resolution du conflit de fusion
+aa4b8c5 HEAD@{13}: commit: Modification depuis le depot A
+34c2708 HEAD@{14}: commit: Ajout initial du fichier pour le conflit
+a08a5ee HEAD@{15}: checkout: moving from main to main
+a08a5ee HEAD@{16}: commit: Ajout initial du fichier pour le conflit
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+e121650 HEAD@{4}: commit: Ajout du compte rendu exo 8 avec les sorties de terminal
+5813c7b HEAD@{5}: commit: Correction exo 7 : ajout des sorties de terminal
+2e48221 HEAD@{6}: commit: Ajout du fichier de reponse exo 7
+679bdfc HEAD@{7}: pull origin main: Merge made by the 'ort' strategy.
+9bac9fa HEAD@{8}: commit: Modification du bas du fichier par depot A
+a1553e2 HEAD@{9}: commit: Initialisation de fichier.txt avec plusieurs lignes
+f10c1f4 HEAD@{10}: commit: Initialisation de fichier.txt avec plusieurs lignes
+dc91b6f HEAD@{11}: commit: Ajout du fichier de reponse exo 6
+f7a7306 HEAD@{12}: commit (merge): Resolution du conflit de fusion
+aa4b8c5 HEAD@{13}: commit: Modification depuis le depot A
+34c2708 HEAD@{14}: commit: Ajout initial du fichier pour le conflit
+a08a5ee HEAD@{15}: checkout: moving from main to main
+a08a5ee HEAD@{16}: commit: Ajout initial du fichier pour le conflit
+bc8fbc1 HEAD@{17}: checkout: moving from main to main
+:
+44efe0e (HEAD -> main) HEAD@{0}: reset: moving to HEAD
+44efe0e (HEAD -> main) HEAD@{1}: reset: moving to HEAD~1
+3aa673d (origin/main) HEAD@{2}: commit: Ajout du fichier de reponse exo 7
+44efe0e (HEAD -> main) HEAD@{3}: commit: Ajout fichier de base exo 8
+e121650 HEAD@{4}: commit: Ajout du compte rendu exo 8 avec les sorties de terminal
+5813c7b HEAD@{5}: commit: Correction exo 7 : ajout des sorties de terminal
+2e48221 HEAD@{6}: commit: Ajout du fichier de reponse exo 7
+679bdfc HEAD@{7}: pull origin main: Merge made by the 'ort' strategy.
+9bac9fa HEAD@{8}: commit: Modification du bas du fichier par depot A
+a1553e2 HEAD@{9}: commit: Initialisation de fichier.txt avec plusieurs lignes
+f10c1f4 HEAD@{10}: commit: Initialisation de fichier.txt avec plusieurs lignes
+dc91b6f HEAD@{11}: commit: Ajout du fichier de reponse exo 6
+f7a7306 HEAD@{12}: commit (merge): Resolution du conflit de fusion
+aa4b8c5 HEAD@{13}: commit: Modification depuis le depot A
+34c2708 HEAD@{14}: commit: Ajout initial du fichier pour le conflit
+a08a5ee HEAD@{15}: checkout: moving from main to main
+a08a5ee HEAD@{16}: commit: Ajout initial du fichier pour le conflit
+bc8fbc1 HEAD@{17}: checkout: moving from main to main
+bc8fbc1 HEAD@{18}: checkout: moving from main to main
+bc8fbc1 HEAD@{19}: commit: Ajout du fichier de reponse exo 5
+31a6e0a HEAD@{20}: checkout: moving from test-mesure to main
+feee3c1 (test-mesure) HEAD@{21}: commit: Troisieme commit sur la branche
+477731d HEAD@{22}: commit: Deuxieme commit sur la branche
+6d17937 HEAD@{23}: commit: Premier commit sur la branche
+:
+
+
+
+
+
+
 
 
 
