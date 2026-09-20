@@ -1,1 +1,1 @@
-Ligne modifiee en parallele sur main
+Ligne initiale du fichier
