@@ -1,39 +1,9 @@
 # Démonstration 1 : Le graphe au tableau
 
-## 1. Schéma conceptuel du graphe de commits (Représentation "au tableau")
-
-```text
-[Commit Initial: 3dcb6c7] (main)
-        |
-        +-----------------------+
-        | (Point de divergence) |
-        v                       v
-[Commit A: 31102be]     [Commit B: 8f9e0d1]
-  (sur 'main')            (sur 'feature-test')
-        |                       |
-        +-----------+-----------+
-                    |
-                    v
-          (Point de fusion / Merge)
-                    |
-        [Commit Merge: 4a2b1c3] (HEAD -> main)
-
-  ## 2. Sortie réelle observée via ⁠git log --graph --oneline 
-
- *   4a2b1c3 (HEAD -> main) Merge branch 'feature-test' into main
-|\  
-| * 8f9e0d1 (feature-test) feat: ajout de la nouvelle fonctionnalite
-* | 31102be docs: mise a jour de la documentation principale
-|/  
-* 3dcb6c7 initial commit
-
-## 3. Correspondance détaillée entre le schéma et ⁠*git log --graph⁠*
-1. Point de départ commun (⁠3dcb6c7⁠) :
- Au tableau : Nœud racine représentant le commit initial.
- Dans ⁠git log⁠ : Dernier commit de la pile d'historique en bas du graphe.
-2. Point de divergence (⁠|\⁠) :
- Au tableau : Séparation en deux voies distinctes (⁠main⁠ et ⁠feature-test⁠).
- Dans ⁠git log⁠ : Représenté par la bifurcation des rails de caractères ⁠|⁠ et ⁠\⁠. Le commit ⁠8f9e0d1⁠ avance sur la branche secondaire pendant que ⁠31102be⁠ avance sur la branche principale.
-3. Point de fusion (⁠4a2b1c3⁠) :
- Au tableau : Convergence des deux lignes vers un nœud unique avec deux parents.
- Dans ⁠git log⁠ : Indiqué par ⁠* 4a2b1c3 Merge branch 'feature-test' into main⁠, où les deux lignes verticales ⁠|\⁠ se réunissent au sommet.
+| Étape / Aspect | Représentation visuelle | Description & Correspondance sur le dépôt réel |
+| :--- | :--- | :--- |
+| **1. Schéma au tableau (Conceptuel)** | `[3e48856]` (Merge local/distant) <br> ├── `[99d577b]` (exo 10) <br> ├── `[31102be]` (ajout 10Mo) <br> ├── `[3225a9c]` (suppr 10Mo) <br> ├── `[ba56647]` (exo 11) <br> ├── `[c4047cd]` (nettoyage) <br> ├── `[b29d605]` (exo 12) <br> └──> `[41f0b0e]` (demo 1 - HEAD) | Schéma représentant la séquence linéaire des commits du chapitre 2 s'appuyant sur un commit de fusion antérieur (`3e48856`). |
+| **2. Sortie `git log --graph` (RÉEL)** | `* 41f0b0e (HEAD -> main, origin/main) demo1 le graphe au tableau` <br> `* b29d605 exo 12 la regle du depot` <br> `* c4047cd Nettoyage du statut Git` <br> `* ba56647 exo 11 reponse terminee avec metriques reelles` <br> `* 3225a9c suppression du fichier texte lisible` <br> `* 31102be ajout d un fichier texte lisible de 10 Mo` <br> `* 99d577b exo 10-1 terminé` <br> `* 3e48856 Merge branch 'main' of github.com/steveakoa49-pixel/ani-2053` <br> `\|\` | Extrait exact obtenu via `git log --graph --oneline --all -n 10` dans le terminal du projet. |
+| **3. Point de divergence & Fusion** | `3e48856` (avec bifurcation `\|\`) | Point de fusion réel issu de l'intégration des modifications distantes GitHub dans la branche locale `main`. |
+| **4. Progression des exercices** | De `99d577b` à `b29d605` | Suite linéaire de commits représentant la réalisation des exercices 10, 11 et 12. |
+| **5. Sommet (HEAD)** | `41f0b0e` | État courant du dépôt local et distant (`HEAD -> main, origin/main`) pour la démonstration 1. |
