@@ -1,5 +1,3 @@
-# Exercice 7 : Le conflit qui n'en est pas un
-
 ## 1. États de départ (avant la fusion)
 
 Sortie de `git log --oneline` dans le Dépôt A (modification locale) :
