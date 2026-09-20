@@ -1,1 +1,1 @@
-Ligne initiale du fichier
+Ligne modifiee par la branche feature-conflit
