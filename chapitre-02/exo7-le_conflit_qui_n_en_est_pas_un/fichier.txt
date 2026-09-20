@@ -1,4 +1,4 @@
-Ligne 1 : haut du fichier
+Ligne 1 : modifiee par le clone B
 Ligne 2
 Ligne 3
 Ligne 4
