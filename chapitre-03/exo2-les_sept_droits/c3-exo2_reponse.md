@@ -1,4 +1,4 @@
-# Réponse à l'exercice : Les sept droits
+# Exercice 2 : Les sept droits
 
 ## Tableau d'observation des 7 droits
 
