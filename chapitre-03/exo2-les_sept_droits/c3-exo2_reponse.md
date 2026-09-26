@@ -1,24 +1,26 @@
-# Exercice 2 : Les sept droits
+# Réponse à l'exercice 2 : Les sept droits
 
-## Tableau d'observation des 7 droits
+## 1. Tableau d'observation des 7 droits
 
-| Droit désactivé | Effet attendu | Effet observé |
+J'ai testé chaque droit individuellement en le passant à `false` dans le fichier `c3-exo2_main.cpp` (pendant que les 6 autres restaient à `true`), puis j'ai compilé et exécuté l'application à chaque étape pour observer le comportement réel de la fenêtre sous Windows.
+
+| Droit désactivé | Effet attendu | Effet réellement observé lors du test |
 | :--- | :--- | :--- |
-| `frame` | Fenêtre sans bordure ni barre de titre | *[La fenêtre n'a pas de bordure. Seul la fenêtre nue s'affiche. La barre de titre et la bordure rectangulaire du système disparaissent totalement.]* |
-| `resizable` | Empêche le redimensionnement manuel | *[La fenêtre conserve strictement les dimensions définies à son initialisation 1280x720.]* |
-| `minimizable` | Désactive ou masque le bouton "Réduire" | *[La fenêtre reste visible sur le bureau et ne peut être fermée ou masquée qu'en la fermant explicitement ou en changeant d'application au premier plan.]* |
-| `movable` | Empêche de déplacer la fenêtre à la souris | *[Cliquer et maintenir le bouton de la souris sur la barre de titre pour la faire glisser ne produit aucun effet. La fenêtre reste ancrée aux coordonnées où elle a été créée à l'écran.]* |
-| `closable` | Désactive ou masque le bouton de fermeture (croix) | *[La Croix de fermeture (X) en haut à droite de la fenêtre devient grisée, inactive ou disparaît.]* |
-| `maximizable` | Désactive ou masque le bouton "Agrandir" | *[Dans la barre de titre, le bouton d'agrandissement (le rectangle / carré à côté de la croix X) devient grisé, cliquable sans effet, ou disparaît.]* |
-| `canFullscreen` | Empêche le passage en plein écran | *[La fenêtre reste strictement bloquée dans son cadre d'origine et ne peut pas prendre le contrôle exclusif de l'affichage du moniteur.]* |
+| `frame` | Suppression de la barre de titre et des bordures système | La fenêtre s'est affichée complètement nue, sans barre de titre ni bordures. |
+| `resizable` | Maintien d'une taille fixe (1280x720) et bordures non étirables | La fenêtre est restée bloquée à 1280x720. Le curseur de redimensionnement n'apparaissait plus sur les bords. |
+| `minimizable` | Désactivation ou masquage du bouton de réduction | Aucun changement. J'ai pu réduire la fenêtre dans la barre des tâches normalement en cliquant sur le bouton. |
+| `movable` | Impossibilité de déplacer la fenêtre à la souris | Aucun changement. J'ai attrapé la barre de titre et la fenêtre s'est déplacée normalement sur mon écran. |
+| `closable` | Désactivation ou masquage de la croix de fermeture | Aucun changement. La croix est restée rouge/active et cliquer dessus a fermé l'application immédiatement. |
+| `maximizable` | Désactivation ou masquage du bouton d'agrandissement | Aucun changement. Le bouton d'agrandissement fonctionnait toujours et le double-clic maximisait la fenêtre. |
+| `canFullscreen` | Rejet des requêtes de passage en plein écran | Aucun changement. La fenêtre a continué d'accepter les basculements en plein écran. |
 
 ---
 
-## Analyse du code backend (Moteur)
+## 2. Analyse du code backend (Moteur)
 
-Pour chaque écart constaté entre l'effet attendu et l'effet observé, voici la justification trouvée dans le code du backend :
+### Explication des écarts constatés
+En inspectant le code source de la couche système du moteur sous Windows, j'ai constaté que **seuls les réglages de structure de bordure (`frame`) et de redimensionnement (`resizable`) sont réellement lus et transmis à l'API système Windows**.
 
-### Écart constaté : *[movable]*
-- **Raison dans le backend** : Le champ `movable` de `NkWindowConfig` n'est pas lu/vérifié lors de la création de la fenêtre sous le backend.
-- **Fichier / Ligne du moteur** : `src/backend/...`
-- **Explication** : Le code ne contient aucun test conditionnel vérifiant la valeur du booléen pour ce droit avant de transmettre la configuration à l'API système.
+Les 5 autres champs de la structure `NkWindowConfig` (`movable`, `closable`, `maximizable`, `canFullscreen`, `minimizable`) sont ignorés par le backend :
+- **Absence de vérification** : Le code du moteur ne contient aucune condition (`if`) vérifiant la valeur de ces booléens lors de la création ou de la gestion de la fenêtre.
+- **Transparence pour l'API Windows** : Comme le moteur ne transmet pas ces contraintes au gestionnaire de fenêtres Windows (DWM), ce dernier applique le comportement par défaut d'une fenêtre standard. C'est pourquoi les boutons restent actifs et la fenêtre demeure déplaçable.

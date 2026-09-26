@@ -1,31 +1,26 @@
-#include "NKWindow/NKWindow.h"
-#include "NKWindow/NKMain.h"
+#include <NKentseu/NKentseu.h>
 
-int nkmain(const NkEntryState &state) {
-    NkWindowConfig cfg;
-    cfg.title = "Fenetre Test - Droit desactive";
+int main() {
+    nkentseu::NkWindowConfig cfg;
+    cfg.title = "Chapitre 3 - Exercice 2 : Les sept droits";
     cfg.width = 1280;
     cfg.height = 720;
 
-    // === DESACTIVATION DES DROITS ===
-    // Vous pouvez passer ces booleens a false pour tester :
-    cfg.frame         = true; // Fenetre sans bordure / cadre
-    cfg.resizable     = true; // Redimensionnement interdit
-    cfg.minimizable   = true; // Bouton reduire desactive
-    cfg.movable       = true; // Deplacement interdit
-    cfg.closable      = true; // Bouton fermer desactive
-    cfg.maximizable   = true; // Bouton agrandir desactive
-    cfg.canFullscreen = true; // Plein ecran interdit
+    cfg.frame = true;
+    cfg.resizable = true;
+    cfg.minimizable = true;
+    cfg.movable = false; // Test de désactivation du droit movable
+    cfg.closable = true;
+    cfg.maximizable = true;
+    cfg.canFullscreen = true;
 
-    // Creation de la fenetre avec la configuration
-    NkWindow window(cfg);
-
-    if (!window.IsOpen()) {
+    nkentseu::NkWindow window;
+    if (!window.Create(cfg)) {
         return -1;
     }
 
-    while (window.IsOpen()) {
-        /* Gestion des evenements */
+    while (window.IsRunning()) {
+        window.PollEvents();
     }
 
     return 0;
