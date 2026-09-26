@@ -1,24 +1,23 @@
-#include <NKentseu/NKentseu.h>
+#include "NKWindow/NKWindow.h"
+#include "NKWindow/NKMain.h"
 
-int main() {
-    nkentseu::NkWindowConfig cfg;
-    cfg.title = "Chapitre 3 - Exercice 3 : Les Bornes";
+using namespace nkentseu;
+
+int nkmain(const NkEntryState &state) {
+    NkWindowConfig cfg;
+    cfg.title = "Ma fenetre";
     cfg.width = 800;
-    cfg.height = 600;
+    cfg.height = 400;
 
-    // Définition de la taille minimale (ex: 400x300)
-    cfg.minWidth = 140;
-    cfg.minHeight = 120;
+    // Test des bornes minimales
+    cfg.minWidth = 400;
+    cfg.minHeight = 300;
 
-    nkentseu::NkWindow window;
-    if (!window.Create(cfg)) {
+    NkWindow window(cfg);
+    if (!window.IsOpen()) {
+        logger.Error("[app] creation fenetre echouee");
         return -1;
     }
-
-    while (window.IsRunning()) {
-        window.PollEvents();
-        // Logique et rendu ici
-    }
-
+    while (window.IsOpen()) { /* les evenements arrivent ici */ }
     return 0;
 }
