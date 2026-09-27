@@ -41,28 +41,14 @@ Cause : La boucle principale while (window.IsOpen()) {} ne contient aucun appel 
 En raison du blocage de la fenêtre au lancement, il a été impossible de tester le survol de la souris et les changements de formes de curseur en temps réel : 
 
 | Zone | Forme demandée (`NkCursorType`) | Forme obtenue | Constat réel |
-| --- | --- | --- | --- |
-| **Zone 0** (0/7) | `NkCursorType::Arrow` | Curseur de chargement OS / Bloqué | Fenêtre figée "(Ne répond pas)"
-
- |
-| **Zone 1** (1/7) | `NkCursorType::IBeam` | Curseur de chargement OS / Bloqué | Fenêtre figée "(Ne répond pas)"
-
- |
-| **Zone 2** (2/7) | `NkCursorType::Hand` | Curseur de chargement OS / Bloqué | Fenêtre figée "(Ne répond pas)"
-
- |
-| **Zone 3** (3/7) | `NkCursorType::Crosshair` | Curseur de chargement OS / Bloqué | Fenêtre figée "(Ne répond pas)"
-
- |
-| **Zone 4** (4/7) | `NkCursorType::SizeWE` | Curseur de chargement OS / Bloqué | Fenêtre figée "(Ne répond pas)"
-
- |
-| **Zone 5** (5/7) | `NkCursorType::SizeNS` | Curseur de chargement OS / Bloqué | Fenêtre figée "(Ne répond pas)"
-
- |
-| **Zone 6** (6/7) | `NkCursorType::NotAllowed` | Curseur de chargement OS / Bloqué | Fenêtre figée "(Ne répond pas)"
-
- |
+| :--- | :--- | :--- | :--- |
+| **Zone 0** (0/7) | `NkCursorType::Arrow` | Curseur de chargement OS / Bloqué | Fenêtre figée "(Ne répond pas)" |
+| **Zone 1** (1/7) | `NkCursorType::IBeam` | Curseur de chargement OS / Bloqué | Fenêtre figée "(Ne répond pas)" |
+| **Zone 2** (2/7) | `NkCursorType::Hand` | Curseur de chargement OS / Bloqué | Fenêtre figée "(Ne répond pas)" |
+| **Zone 3** (3/7) | `NkCursorType::Crosshair` | Curseur de chargement OS / Bloqué | Fenêtre figée "(Ne répond pas)" |
+| **Zone 4** (4/7) | `NkCursorType::SizeWE` | Curseur de chargement OS / Bloqué | Fenêtre figée "(Ne répond pas)" |
+| **Zone 5** (5/7) | `NkCursorType::SizeNS` | Curseur de chargement OS / Bloqué | Fenêtre figée "(Ne répond pas)" |
+| **Zone 6** (6/7) | `NkCursorType::NotAllowed` | Curseur de chargement OS / Bloqué | Fenêtre figée "(Ne répond pas)" |
 
 ---
 
