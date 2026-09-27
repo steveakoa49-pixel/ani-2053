@@ -38,7 +38,7 @@ Cause : La boucle principale while (window.IsOpen()) {} ne contient aucun appel 
 
 ## 3. Tableau des observations visuelles
 
-En raison du blocage de la fenêtre au lancement, il a été impossible de tester le survol de la souris et les changements de formes de curseur en temps réel : 
+En raison du blocage de la fenêtre au lancement, il a été impossible de tester le survol de la souris et les changements de forme.
 
 | Zone | Forme demandée (`NkCursorType`) | Forme obtenue | Constat réel |
 | :--- | :--- | :--- | :--- |
