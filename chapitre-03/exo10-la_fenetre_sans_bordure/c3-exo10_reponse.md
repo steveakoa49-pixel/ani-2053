@@ -1,4 +1,4 @@
-# Rapport d'Observation : Exercice 10 - La Fenêtre Sans Bordure
+# Exercice 10 : La Fenêtre Sans Bordure
 
 ## 1. Contexte du test
 L'objectif de cet exercice est d'instancier une fenêtre sans bordure native (borderless) et de lui associer les fonctionnalités d'une barre de titre sur mesure : affichage du titre, boutons de contrôle (Réduire, Agrandir/Restaurer, Fermer), déplacement à la souris ainsi que l'agrandissement par double-clic.
