@@ -1,0 +1,2 @@
+size : 18, glyphs : 95, texture : 512 512, lost : 65
+size : 48, glyphs : 95, texture : 1024 1024, lost : 50

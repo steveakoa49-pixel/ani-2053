@@ -1,0 +1,8 @@
+Why a single texture :
+Using a single texture atlas allows combining all character glyphs into one graphical resource. This means the entire text can be rendered in a single draw call, drastically reducing state changes and GPU overhead compared to binding individual textures for each character.
+
+What the size changes :
+Increasing the font size enlarges the physical dimensions of each rasterized glyph in pixels. Consequently, the atlas requires a larger texture (e.g., jumping from 512x512 to 1024x1024) to fit all characters, while the total number of glyphs remains constant.
+
+What the gap between glyphs is for :
+The gap (margin) between glyphs prevents texture bleeding or artifacts. When the GPU samples texture coordinates during scaling, bilinear filtering can accidentally bleed pixels from a neighboring glyph if there is no safety margin separating them.
