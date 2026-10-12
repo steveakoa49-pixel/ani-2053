@@ -1,0 +1,3 @@
+file : film.mp4, opened : yes, frames : 240, probe : MP4
+file : film_coupe.mp4, opened : yes, frames : 92, probe : MP4
+file : faux.mp4, opened : no, frames : 0, probe : INCONNU

@@ -1,0 +1,8 @@
+What the refusal tells me :
+A refusal simply indicates that the media reader cannot process the file due to a format mismatch, missing headers, or unsupported data structures, preventing it from initializing a playback session safely without crashing.
+
+What it does not tell me :
+The refusal does not explain the exact underlying reason for the failure. It does not specify whether the file is completely corrupt, written in an unknown container format, or if it simply lacks the required internal metadata to start decoding.
+
+How I found the cause :
+By using the NkMediaProbe tool on the failing files, I was able to inspect their raw internal structures. This revealed whether the container headers were completely missing (as in the renamed text file) or if the stream was abruptly truncated mid-sequence (as in the half-sized cut video).
