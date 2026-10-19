@@ -1,0 +1,26 @@
+Serveur :
+[2026-10-19 21:19:18.826] [INF] [default] [NkConnection.cpp:937 in StartServer] -> [NKNet] Serveur demarre sur port 7777 (max 8 clients)
+[2026-10-19 21:19:18.826] [INF] [default] [NkConnection.cpp:1208 in NetThreadLoop] -> [NKNet] Thread reseau demarre
+[2026-10-19 21:19:24.403] [INF] [default] [parle.cpp:78 in nkmain] -> [APP] : RECHERCHE DU CLIENT
+[2026-10-19 21:19:27.743] [INF] [default] [NkSocket.cpp:837 in RecvFrom] -> [NKNet] [NET-DIAG] recvfrom #0 <- 0 (0 bytes)
+[2026-10-19 21:19:27.745] [INF] [default] [NkConnection.cpp:1416 in FindOrCreateConnection] -> [NKNet] Connexion creee : 192.168.202.132:53214 (slot 1)
+[2026-10-19 21:19:28.061] [INF] [default] [NkConnection.cpp:797 in ProcessACK] -> [NKNet] ACK recu - connexion etablie avec client 7823295825147794755
+[2026-10-19 21:19:28.061] [WRN] [default] [parle.cpp:52 in operator()] -> [APP] : Client connecte avec succes -- ID pair : 7823295825147794755
+[2026-10-19 21:19:29.355] [WRN] [default] [parle.cpp:100 in nkmain] -> [Serveur] : "Bonjour depuis le client." -- expediteur : 7823295825147794755
+[2026-10-19 21:19:29.356] [INF] [default] [parle.cpp:104 in nkmain] -> [APP] : Message recu, arret du serveur
+[2026-10-19 21:19:29.875] [INF] [default] [NkConnection.cpp:1230 in NetThreadLoop] -> [NKNet] Thread reseau arrete
+[2026-10-19 21:19:29.876] [INF] [default] [NkConnection.cpp:1059 in Shutdown] -> [NKNet] Gestionnaire de connexions arrete
+
+Client :
+[2026-10-19 21:19:28.828] [WRN] [default] [parle.cpp:25 in nkmain] -> [APP] ARGUMENT : --client, ip : 192.168.202.209
+[2026-10-19 21:19:28.833] [INF] [default] [NkConnection.cpp:1026 in Connect] -> [NKNet] Connexion initiee vers 192.168.202.209:7777
+[2026-10-19 21:19:28.834] [INF] [default] [NkConnection.cpp:1208 in NetThreadLoop] -> [NKNet] Thread reseau demarre
+[2026-10-19 21:19:29.017] [INF] [default] [NkConnection.cpp:739 in ProcessSYNACK] -> [NKNet] Connexion etablie avec serveur 1
+[2026-10-19 21:19:29.018] [WRN] [default] [parle.cpp:118 in operator()] -> [APP] : Serveur connecte avec succes -- ID pair : 1
+[2026-10-19 21:19:29.355] [WRN] [default] [parle.cpp:145 in nkmain] -> [APP] : Message envoye
+[2026-10-19 21:19:30.584] [INF] [default] [NkConnection.cpp:1230 in NetThreadLoop] -> [NKNet] Thread reseau arrete
+[2026-10-19 21:19:30.585] [INF] [default] [NkConnection.cpp:1059 in Shutdown] -> [NKNet] Gestionnaire de connexions arrete
+
+Pair : Cote serveur, l'identifiant du pair est 7823295825147794755 : c'est l'identifiant du client qui vient de se connecter, vu par le serveur (son champ value). Cote client, l'identifiant du pair est 1 : c'est l'identifiant du serveur vu par le client, c'est-a-dire la valeur NkPeerId::Server(). Les deux cotes ne voient donc pas le meme nombre : chacun voit l'identifiant de l'autre, pas le sien.
+
+Machines : Deux machines distinctes sur le meme reseau local, sans internet. Le serveur tourne sur la machine d'adresse 192.168.202.209, le client sur la machine d'adresse 192.168.202.132. Le client s'est connecte au serveur par 192.168.202.209:7777. Le pare-feu Windows a demande l'autorisation au premier lancement du serveur ; elle a ete acceptee, sinon la connexion entre les deux machines aurait echoue.
