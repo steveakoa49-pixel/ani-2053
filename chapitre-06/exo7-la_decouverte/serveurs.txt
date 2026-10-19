@@ -1,0 +1,13 @@
+Liste :
+[APP] : 5 serveur(s) trouve(s)
+[APP] : serveur #1 -- adresse : 192.168.202.209:7777 -- nom : My LAN Server -- maxPlayers : 16
+[APP] : serveur #2 -- adresse : 192.168.202.209:7777 -- nom : My LAN Server -- maxPlayers : 16
+[APP] : serveur #3 -- adresse : 192.168.202.132:7777 -- nom : My LAN Server -- maxPlayers : 16
+[APP] : serveur #4 -- adresse : 192.168.202.132:7777 -- nom : My LAN Server -- maxPlayers : 16
+[APP] : serveur #5 -- adresse : 192.168.202.132:7777 -- nom : My LAN Server -- maxPlayers : 16
+
+Apparitions : Deux serveurs distincts apparaissent dans la liste : 192.168.202.209:7777 (entrees #1 et #2, soit deux fois) et 192.168.202.132:7777 (entrees #3, #4 et #5, soit trois fois). Le nombre d'apparitions par serveur n'est pas fixe : il depend du moment ou le client a commence a ecouter par rapport aux diffusions du serveur.
+
+Pourquoi : NkDiscovery::Broadcast, dans NkLobby.cpp, emet un datagramme UDP vers l'adresse de diffusion du reseau local ; c'est ce qui permet a un client de trouver les serveurs sans connaitre leur adresse. NkDiscovery::Listen, dans le meme fichier, ouvre un socket en ecoute, recoit les datagrammes pendant la duree demandee et pousse chaque ServerInfo recu dans le vecteur passe en argument, sans dedoublonner : si un meme serveur rediffuse plusieurs fois pendant la fenetre d'ecoute, il est ajoute plusieurs fois. Ici le serveur diffuse toutes les deux secondes pendant dix secondes, et le client ecoute six secondes : selon le moment ou le client a commence a ecouter, il capte deux ou trois diffusions de chaque serveur, ce qui explique les deux apparitions pour l'un et les trois pour l'autre. Les entrees repetees ne sont donc pas des serveurs differents, mais plusieurs annonces du meme serveur.
+
+Machines : Deux machines distinctes sur le meme reseau local, sans internet. Le premier serveur tourne sur la machine d'adresse 192.168.202.209, le second sur la machine d'adresse 192.168.202.132. Les deux diffusent sur le port 7777 ; le client a ete lance depuis la machine 192.168.202.132 et a trouve les deux serveurs.
