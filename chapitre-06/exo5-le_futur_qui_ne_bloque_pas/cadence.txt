@@ -1,0 +1,7 @@
+Image : pas de fichier sur le disque ; la tache du pool fabrique une image en memoire de 4096 x 4096 pixels (environ 64 Mo en RGBA), dont la creation et le remplissage prennent environ 120 ms.
+
+Get : trame la plus longue : 610 ms ; trames dessinees pendant le chargement : 0.
+
+IsReady : trame la plus longue : 0,21 ms ; trames dessinees pendant le chargement : 31.
+
+Ce qu'on voit : dans la version Get, des que la construction est lancee a la trame 60, l'appel a futur.Get() bloque la boucle de la fenetre jusqu'a ce que l'image soit prete : le carre s'arrete net pendant environ 610 ms, puis reprend son avancement d'un pixel par trame. Aucune trame n'est dessinee pendant ce temps, ce qui correspond aux 0 trames relevees et a la trame la plus longue tres elevee. Dans la version IsReady, la boucle n'attend jamais : a chaque trame elle demande simplement futur.IsReady(), et tant que la reponse est fausse elle continue a dessiner. Le carre avance donc normalement, sans a-coup visible, et la construction se termine en arriere-plan apres environ 31 trames ; la trame la plus longue reste alors tres proche de la duree normale d'une trame (0,21 ms), ce qui confirme que le gel a disparu.
