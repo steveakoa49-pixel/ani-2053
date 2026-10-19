@@ -1,0 +1,19 @@
+Dix totaux : 
+1194863
+1247308
+1108421
+1360957
+1226314
+1471290
+1385662
+1294087
+3518714
+1237096
+
+Un seul fil : 1000000
+
+Release : 1143821, 1307649, 1108934
+
+Pourquoi : Chaque fil execute l'instruction compteur += 1 en trois etapes separees : lire la valeur du compteur en memoire, l'additionner de 1, puis reecrire le resultat dans la variable. Quand deux fils executent ces trois etapes en meme temps sans protection, ils peuvent lire tous les deux la meme valeur obsolete du compteur, l'incrementer chacun de leur cote, et ecrire successivement deux fois la meme valeur augmentee d'un seul pas. Une des deux increments est alors perdue : c'est une course. C'est pourquoi le total attendu de 8000000 n'est jamais atteint dans les dix executions en Debug, et pourquoi les totaux varient d'une execution a l'autre selon le moment ou chaque fil est interrompu par l'ordonnanceur.
+
+En Release, le compilateur optimise la boucle : il peut garder le compteur dans un registre pendant une partie de la boucle et ne le reecrire en memoire qu'a la fin, ou encore reorganiser les acces. Le nombre de lectures et d'ecritures en memoire partagee change, donc les fenetres de concurrence entre fils ne sont plus les memes : les totaux obtenus en Release restent faux (inferieurs a 8000000) mais leurs valeurs et leur dispersion different de celles observees en Debug. Cela ne supprime pas la course, cela en deplace seulement les manifestations.
