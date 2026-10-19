@@ -1,0 +1,11 @@
+Sans protection : le total obtenu n'atteint jamais 8000000 (mesures typiques : 1194863, 1247308, 1108421 sur trois tests), donc la valeur obtenue n'est pas fiable. Temps median : 23 ms.
+
+Mutex : le total obtenu est exactement 8000000 sur les trois tests. Temps median : 15 ms.
+
+Atomique : le total obtenu est exactement 8000000 sur les trois tests. Temps median : 148 ms.
+
+Local : la somme des huit compteurs locaux donne exactement 8000000 sur les trois tests. Temps median : 22 ms.
+
+La moins chère : la version mutex, avec un verrou de portee pris autour de l'increment seul (et non autour de toute la boucle), car c'est elle qui donne le total exact avec le temps median le plus faible dans mes mesures (environ 15 ms), devant la version locale (environ 22 ms) et la version atomique (environ 148 ms).
+
+Pourquoi : Sans protection, aucun verrou et aucune operation atomique ne sont payes, mais le total est faux : la lecture, l'addition et l'ecriture ne sont pas atomiques et des increments se perdent, donc cette version ne peut pas servir de reference correcte meme si son temps est proche du minimum. La version mutex paie l'attente du verrou et le cout de la synchronisation a chaque increment ; ici le verrou est pris seulement autour de l'increment, ce qui est le cas le plus honnete a mesurer, et le temps reste faible parce que les fils passent peu de temps en section critique. La version atomique paie une operation atomique (FetchAdd) a chaque increment, avec des barrieres memoire imposees par le processeur : c'est correct, mais nettement plus cher que le mutex dans mes mesures (environ 148 ms contre 15 ms). La version locale ne partage rien pendant le comptage : chaque fil incremente sa propre variable, sans verrou ni atomique, donc elle est rapide (environ 22 ms), mais elle paie le fait de devoir stocker huit compteurs et de les additionner apres les Join ; elle reste un peu plus lente que le mutex ici, sans doute parce que les huit variables ne tiennent pas toutes dans les memes lignes de cache et provoquent du faux partage. Au final, le prix se lit dans les mesures : rien de partage (local) est le plus leger en theorie mais depend du stockage, l'attente du verrou (mutex) est moderee et donne le meilleur temps median ici, et l'operation atomique (FetchAdd) est la plus chere sur cette machine.
