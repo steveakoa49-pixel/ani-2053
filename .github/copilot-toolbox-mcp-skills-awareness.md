@@ -1,6 +1,6 @@
 # GitHub Copilot Toolbox — MCP & Skills awareness
 
-_Generated: 2026-09-18T03:44:07.532Z_
+_Generated: 2026-11-09T14:13:55.786Z_
 
 ## How to use this report
 
@@ -13,9 +13,9 @@ _Generated: 2026-09-18T03:44:07.532Z_
 
 ## MCP — workspace
 
-Workspace `mcp.json` _(folder: mon_depot_essai)_
+Workspace `mcp.json` _(folder: ani-2053)_
 
-- **c:\Users\User Lenovo\Documents\mon_depot_essai\.vscode\mcp.json** — _File missing_
+- **c:\Users\User Lenovo\Documents\ani-2053\.vscode\mcp.json** — _File missing_
 
 _No active workspace servers in mcp.json._
 
