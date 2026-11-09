@@ -5,7 +5,7 @@
 
 struct SlotNode {
     std::string tag;
-    int held_ref; // -1 pour pointeur nul
+    int held_ref;
 };
 
 int main() {
@@ -13,14 +13,18 @@ int main() {
     std::cin.tie(nullptr);
 
     int line_total;
-    if (!(std::cin >> line_total)) return 0;
+    if (!(std::cin >> line_total)) {
+        return 0;
+    }
 
     std::vector<SlotNode> slots;
     std::vector<std::string> appearance_order;
 
     auto locate_slot = [&](const std::string& name) -> int {
         for (size_t i = 0; i < slots.size(); ++i) {
-            if (slots[i].tag == name) return static_cast<int>(i);
+            if (slots[i].tag == name) {
+                return static_cast<int>(i);
+            }
         }
         return -1;
     };
@@ -39,8 +43,6 @@ int main() {
     std::vector<int> termination_sequence;
     std::vector<int> refusal_lines;
 
-    // Structure temporaire pour stocker les instructions si nécessaire, 
-    // ou traitement direct avec interception des copies.
     struct InstructionRecord {
         int index;
         std::string op;
@@ -62,7 +64,6 @@ int main() {
         }
     }
 
-    // Vérification initiale des copies
     for (const auto& inst : stream) {
         if (inst.op == "COPY") {
             refusal_lines.push_back(inst.index);
@@ -76,15 +77,13 @@ int main() {
         return 0;
     }
 
-    // Réinitialisation des slots pour l'exécution réelle
     slots.clear();
-    for (const auto& name : appearance_order) {
-        // On recrée proprement
-    }
-    // Reconstruisons dynamiquement les slots pendant la simulation
+
     auto get_or_create_slot = [&](const std::string& name) -> int {
         for (size_t i = 0; i < slots.size(); ++i) {
-            if (slots[i].tag == name) return static_cast<int>(i);
+            if (slots[i].tag == name) {
+                return static_cast<int>(i);
+            }
         }
         slots.push_back({name, -1});
         return static_cast<int>(slots.size() - 1);
@@ -130,7 +129,6 @@ int main() {
         }
     }
 
-    // Destruction finale des variables restantes dans l'ordre inverse de leur première apparition
     for (auto it = appearance_order.rbegin(); it != appearance_order.rend(); ++it) {
         int s_idx = locate_slot(*it);
         if (s_idx != -1 && slots[s_idx].held_ref != -1) {
