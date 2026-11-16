@@ -27,7 +27,7 @@ void purge_by_indices(std::vector<std::string>& layout,
 
 void print_collection(const std::vector<std::string>& collection) {
     if (collection.empty()) {
-        std::cout << "AUCUN";
+        std::cout << " AUCUN";
         return;
     }
     for (const auto& name : collection) {
