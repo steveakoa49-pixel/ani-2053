@@ -13,10 +13,11 @@ struct CanvasObject {
 struct ArchitectureContext {
     std::vector<std::string> layout;
     std::set<int> selected_indices;
-    std::set<string> selected_ids;
+    std::set<std::string> selected_ids;
 };
 
-void purge_by_indices(std::vector<std::string>& layout, const std::set<int>& target_indices) {
+void purge_by_indices(std::vector<std::string>& layout, 
+                      const std::set<int>& target_indices) {
     for (int idx = static_cast<int>(layout.size()) - 1; idx >= 0; --idx) {
         if (target_indices.count(idx)) {
             layout.erase(layout.begin() + idx);
@@ -34,7 +35,8 @@ void print_collection(const std::vector<std::string>& collection) {
     }
 }
 
-std::vector<std::string> extract_native_selection(const std::vector<CanvasObject>& items) {
+std::vector<std::string> extract_native_selection(
+    const std::vector<CanvasObject>& items) {
     std::vector<std::string> results;
     for (const auto& item : items) {
         if (item.is_selected) {
@@ -44,7 +46,8 @@ std::vector<std::string> extract_native_selection(const std::vector<CanvasObject
     return results;
 }
 
-std::vector<std::string> extract_index_selection(const ArchitectureContext& ctx) {
+std::vector<std::string> extract_index_selection(
+    const ArchitectureContext& ctx) {
     std::vector<std::string> results;
     for (int i = 0; i < static_cast<int>(ctx.layout.size()); ++i) {
         if (ctx.selected_indices.count(i)) {
@@ -54,7 +57,8 @@ std::vector<std::string> extract_index_selection(const ArchitectureContext& ctx)
     return results;
 }
 
-std::vector<std::string> extract_id_selection(const ArchitectureContext& ctx) {
+std::vector<std::string> extract_id_selection(
+    const ArchitectureContext& ctx) {
     std::vector<std::string> results;
     for (const auto& name : ctx.layout) {
         if (ctx.selected_ids.count(name)) {
@@ -125,13 +129,19 @@ int main() {
             int p1, p2;
             tokenizer >> p1 >> p2;
 
-            if (p1 >= 0 && p2 >= 0 && p1 < static_cast<int>(native_model.size()) && p2 < static_cast<int>(native_model.size())) {
+            if (p1 >= 0 && p2 >= 0 && 
+                p1 < static_cast<int>(native_model.size()) && 
+                p2 < static_cast<int>(native_model.size())) {
                 std::swap(native_model[p1], native_model[p2]);
             }
-            if (p1 >= 0 && p2 >= 0 && p1 < static_cast<int>(index_model.layout.size()) && p2 < static_cast<int>(index_model.layout.size())) {
+            if (p1 >= 0 && p2 >= 0 && 
+                p1 < static_cast<int>(index_model.layout.size()) && 
+                p2 < static_cast<int>(index_model.layout.size())) {
                 std::swap(index_model.layout[p1], index_model.layout[p2]);
             }
-            if (p1 >= 0 && p2 >= 0 && p1 < static_cast<int>(id_model.layout.size()) && p2 < static_cast<int>(id_model.layout.size())) {
+            if (p1 >= 0 && p2 >= 0 && 
+                p1 < static_cast<int>(id_model.layout.size()) && 
+                p2 < static_cast<int>(id_model.layout.size())) {
                 std::swap(id_model.layout[p1], id_model.layout[p2]);
             }
         }
@@ -151,7 +161,8 @@ int main() {
         }
         else if (command == "SUPPRIME") {
             native_model.erase(
-                std::remove_if(native_model.begin(), native_model.end(), [](const CanvasObject& obj) {
+                std::remove_if(native_model.begin(), native_model.end(), 
+                               [](const CanvasObject& obj) {
                     return obj.is_selected;
                 }),
                 native_model.end()
@@ -161,7 +172,8 @@ int main() {
             index_model.selected_indices.clear();
 
             id_model.layout.erase(
-                std::remove_if(id_model.layout.begin(), id_model.layout.end(), [&id_model](const std::string& name) {
+                std::remove_if(id_model.layout.begin(), id_model.layout.end(), 
+                               [&id_model](const std::string& name) {
                     return id_model.selected_ids.count(name) > 0;
                 }),
                 id_model.layout.end()
