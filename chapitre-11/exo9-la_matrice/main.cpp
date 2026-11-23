@@ -20,8 +20,14 @@ struct Fiche
 
 static int rangSource(const std::string& s)
 {
-    if (s == "MESUREE") return 0;
-    if (s == "OBSERVEE") return 1;
+    if (s == "MESUREE")
+    {
+        return 0;
+    }
+    if (s == "OBSERVEE")
+    {
+        return 1;
+    }
     return 2;
 }
 
@@ -96,9 +102,7 @@ int main()
         "EN_PASSANT", "DECOUPER", "MAINTENANT", "ON_NE_LE_FAIT_PAS"
     };
 
-    // index = (valeur>=3)<<1 | (cout>=3)
-    // 00 -> EN_PASSANT, 01 -> DECOUPER, 10 -> MAINTENANT, 11 -> ON_NE_LE_FAIT_PAS
-    static const int indexCase[4] = { 0, 2, 1, 3 };
+    static const int indexCase[4] = { 0, 3, 2, 1 };
 
     std::vector<const Fiche*> retenues;
     retenues.reserve(fiches.size());
