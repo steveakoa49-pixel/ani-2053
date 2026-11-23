@@ -15,7 +15,6 @@ int main()
     std::unordered_map<std::string, int> posCommit;
     posCommit.reserve(nbCommits * 2);
 
-    // presence[f][i] = 1 si la fonction f existe après le commit i
     std::unordered_map<std::string, std::vector<char>> presence;
     presence.reserve(64);
 
@@ -35,27 +34,24 @@ int main()
         {
             std::string f;
             std::cin >> f;
-            if (ajout) courant[f] = 1;
-            else courant.erase(f);
+            if (ajout)
+            {
+                courant[f] = 1;
+            }
+            else
+            {
+                courant.erase(f);
+            }
         }
 
         for (auto& kv : courant)
         {
             auto& vec = presence[kv.first];
-            if (vec.empty()) vec.assign(nbCommits, 0);
+            if (vec.empty())
+            {
+                vec.assign(nbCommits, 0);
+            }
             vec[i] = 1;
-        }
-    }
-
-    // Remplir les trous : pour chaque fonction, propager la présence vers l'avant
-    for (auto& kv : presence)
-    {
-        auto& v = kv.second;
-        char dernier = 0;
-        for (int i = 0; i < nbCommits; ++i)
-        {
-            if (v[i]) dernier = 1;
-            else v[i] = dernier;
         }
     }
 
@@ -70,17 +66,27 @@ int main()
         std::cin >> h >> etat >> f;
 
         int depart = posCommit[h];
-        bool veutPresent = (etat[0] == 'D'); // DISPONIBLE
+        bool veutPresent = (etat[0] == 'D');
 
         auto it = presence.find(f);
-        const std::vector<char>* vec = (it != presence.end()) ? &it->second : nullptr;
+        const std::vector<char>* vec = nullptr;
+        if (it != presence.end())
+        {
+            vec = &it->second;
+        }
 
-        auto existeA = [&](int c) -> bool {
-            return vec && (*vec)[c];
+        auto existeA = [&](int c) -> bool
+        {
+            return vec != nullptr && (*vec)[c] != 0;
         };
 
-        auto mentA = [&](int c) -> bool {
-            return veutPresent ? !existeA(c) : existeA(c);
+        auto mentA = [&](int c) -> bool
+        {
+            if (veutPresent)
+            {
+                return !existeA(c);
+            }
+            return existeA(c);
         };
 
         if (!mentA(nbCommits - 1))
